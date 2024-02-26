@@ -17,6 +17,7 @@ module.exports.addToCart=async(req,res)=>{
         if(productInCart.rows.length>0){
             //update quantity
             await pool.query('UPDATE cart SET quantity=quantity+$1 WHERE user_id=$2 AND product_id=$3',[quantity,userId,productId])
+            res.status(201).json("Update product as present in cart")
 
         }else{
             //if not present add to cart
@@ -25,7 +26,7 @@ module.exports.addToCart=async(req,res)=>{
                 [userId, productId, quantity]
               );
         }
-        res.sendStatus(200)
+        res.sendStatus(200).jason("product added in cart")
 
     }catch (error) {
         console.error('Error adding product to cart:', error);
