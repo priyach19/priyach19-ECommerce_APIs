@@ -105,7 +105,7 @@ router.get('/products/:productId',productsController.getproductbyId)
 
 /**
  * @swagger
- * /api/products/byCategory/{categoryId}:
+ * /api/productsbycategories/{categoryId}:
  *   get:
  *     summary: Get products by category ID
  *     description: Retrieve a list of products based on the specified category ID
