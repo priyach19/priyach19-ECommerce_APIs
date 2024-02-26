@@ -11,6 +11,8 @@ This project create all the possible APIs needed for any ecommerce application. 
   - place order
   - Order details
   - Order history
+    
+#### And you can find swagger docs on api- http://localhost:3000/api-docs
 
 ## How to run the project
 - First install all packages needed using
